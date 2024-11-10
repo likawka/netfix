@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %} 
+    {% block title %}
+        NetFix
+    {% endblock %}
+
+{% block content %}
+<div style="margin-top: 50px; font-family: 'Arial', sans-serif; color: #333;">
+    <p class="site_title" style="font-size: 2rem; font-weight: bold; color: #2c3e50; margin-bottom: 20px;">NetFix Services</p>
+    <ul style="list-style-type: none; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+        <li><a href="/services/air-conditioner" style="font-size: 1rem; color: #2980b9; text-decoration: none; transition: color 0.3s ease;">Air Conditioner</a></li>
+        <li><a href="/services/all-in-one" style="font-size: 1rem; color: #2980b9; text-decoration: none; transition: color 0.3s ease;">All in One</a></li>
+        <li><a href="/services/carpentry" style="font-size: 1rem; color: #2980b9; text-decoration: none; transition: color 0.3s ease;">Carpentry</a></li>
+        <li><a href="/services/electricity" style="font-size: 1rem; color: #2980b9; text-decoration: none; transition: color 0.3s ease;">Electricity</a></li>
+        <li><a href="/services/gardening" style="font-size: 1rem; color: #2980b9; text-decoration: none; transition: color 0.3s ease;">Gardening</a></li>
+        <li><a href="/services/home-machines" style="font-size: 1rem; color: #2980b9; text-decoration: none; transition: color 0.3s ease;">Home Machines</a></li>
+        <li><a href="/services/house-keeping" style="font-size: 1rem; color: #2980b9; text-decoration: none; transition: color 0.3s ease;">House Keeping</a></li>
+        <li><a href="/services/interior-design" style="font-size: 1rem; color: #2980b9; text-decoration: none; transition: color 0.3s ease;">Interior Design</a></li>
+        <li><a href="/services/locks" style="font-size: 1rem; color: #2980b9; text-decoration: none; transition: color 0.3s ease;">Locks</a></li>
+        <li><a href="/services/painting" style="font-size: 1rem; color: #2980b9; text-decoration: none; transition: color 0.3s ease;">Painting</a></li>
+        <li><a href="/services/plumbing" style="font-size: 1rem; color: #2980b9; text-decoration: none; transition: color 0.3s ease;">Plumbing</a></li>
+        <li><a href="/services/water-heaters" style="font-size: 1rem; color: #2980b9; text-decoration: none; transition: color 0.3s ease;">Water Heaters</a></li>
+    </ul>
+</div>
+
+<!-- Add hover effect to links -->
+<style>
+    a:hover {
+        color: #3498db;
+        text-decoration: underline;
+    }
+
+    .site_title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+</style>
+
+{% endblock %}

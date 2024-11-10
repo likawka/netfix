@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% block title %}
+    {{field}} Services List
+{% endblock %}
+{% block content %}
+    {% if user.is_company %}
+        <a href="/services">← All Services</a>
+    {% endif %}
+    {% if services.all|length != 0 %}
+        <p class="title">{{field}} Services</p>
+        <ul class='services_list'>
+            {% for service in services %}
+                <div >
+                    <div class='service_list_info'>
+                        <li>
+                            <a href="/services/{{service.id}}">{{ service.name }}</a>
+                            ({{ service.field }})
+                             - {{ service.price_hour }}€/hour 
+                            <p style="float: right; margin: 0;">
+                                by <a href="/company/{{ service.company.user.username }}">{{ service.company.user.username }}</a>
+                            </p> 
+                            <br>
+                            Times requested: {{ service.times_requested }}
+                            <br>
+                            Description: {{ service.description }}
+                        </li>
+                    </div>
+                </div>
+                {% if forloop.counter != services.all|length %}
+                    <div class="line"></div>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h2>Sorry. No {{field}} services available</h2>
+    {% endif %}
+{% endblock %}
